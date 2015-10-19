@@ -17,12 +17,6 @@
 <body>
 
 <div data-role="layout" data-id="main">
-    <div data-role="header">
-        <div data-role="navbar">
-            <span data-role="view-title"></span>
-        </div>
-    </div>
-
     <!-- application views will be rendered here -->
 
     <div data-role="footer">
@@ -33,7 +27,7 @@
             </div>
 
             <div style="text-align: center; justify-content: center;">
-                <ul id="racbuttonstrip" data-role="buttongroup">
+                <ul id="racbuttonstrip" data-role="buttongroup" data-select="onSelect">
                     <li id="mybusiness">
                         My Business
                     </li>
@@ -51,6 +45,6 @@
         </div>
     </div>
 </div>
-
+    
 </body>
 </html>
