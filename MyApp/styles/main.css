@@ -378,12 +378,11 @@ body, html {
     border: none;
 }
 
-#homepage .km-content {
-    background-image: url('styles/images/business_bkg.png');
-    background-color: red;
-    height: 100%;
-    width: 100%;
-    z-index: 10000;
+.fill {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image:"path/to/image.jpg";
 }
 
 
