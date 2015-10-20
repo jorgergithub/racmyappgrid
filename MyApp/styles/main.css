@@ -378,11 +378,9 @@ body, html {
     border: none;
 }
 
-.fill {
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-image:"path/to/image.jpg";
+#homepage .km-content {
+    background-image: url(../styles/images/business_bkg.png);
+    background-size: 100% 100%;
 }
 
 
