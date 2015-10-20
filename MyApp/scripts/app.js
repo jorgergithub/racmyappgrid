@@ -8,7 +8,7 @@ var currentPrinterIndex;
 (function () {
 
     var printers = [];
-    for (currentPrinterIndex = 0; currentPrinterIndex < 10000; currentPrinterIndex++) {
+    for (currentPrinterIndex = 0; currentPrinterIndex < 10; currentPrinterIndex++) {
         printers.push(createPrinter());
     }
 
