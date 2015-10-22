@@ -388,12 +388,66 @@ body, html {
     width: 49%; 
 }
 
+.headerLabel {
+    font-size: 40px; font-weight: bolder;
+}
+
+.headerAddPrinter {
+    font-size: 20px; 
+}
+
+.headerDiv {
+    height: 75px;
+}
+
+.addPrinterButton {
+    height: 32px;
+}
+
+#buttonStripDiv{
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+}
+
+.footerDiv {
+    height: 110px; 
+}
+
 @media only screen and (max-width: 480px) {
     .printerRowWidth {
         width: 98%; 
     }
-}
 
+    .footerIcon {
+        display: none; 
+    }
+    
+    .headerLabel {
+        font-size: 16px; 
+    }
+    
+    .headerIcon {
+        display: none; 
+    }
+    
+    .headerAddPrinter {
+        font-size: 12px; 
+    }
+    
+    .headerDiv {
+        height: 40px;
+    }
+
+    .addPrinterButton {
+        height: 22px;
+    }
+    .footerDiv {
+        height: 50px; 
+    }
+}
 
 
 
