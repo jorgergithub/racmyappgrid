@@ -77,6 +77,7 @@ function onSelect(e) {
     }
 }
 
+// jorges comment
 function addPrinter(e) {
     var newPrinter = createPrinter();
     listviewDatasource.add(newPrinter);
