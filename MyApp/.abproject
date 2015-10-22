@@ -2,7 +2,7 @@
 	"ProjectName": "MyApp",
 	"ProjectGuid": "{1c689052-ce0d-4f33-8538-64b4cbbf373a}",
 	"projectVersion": 1,
-	"AppIdentifier": "com.telerik.MyApp",
+	"AppIdentifier": "com.ricoh.mdv.kendo",
 	"DisplayName": "MyApp",
 	"Author": "",
 	"Description": "MyApp",
