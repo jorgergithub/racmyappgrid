@@ -3,12 +3,12 @@
 // later on so that we can use it if need be
 var app;
 var listviewDatasource;
-var currentPrinterIndex;
+var currentPrinterIndex = 1;
 
 (function () {
 
-    var printers = [];
-    for (currentPrinterIndex = 0; currentPrinterIndex < 10; currentPrinterIndex++) {
+    var printers = [], i;
+    for (i = 0; i < 10; i++) {
         printers.push(createPrinter());
     }
 
