@@ -1,9 +1,16 @@
 
+// store a reference to the application object that will be created
+// later on so that we can use it if need be
+var app;
+var listviewDatasource;
+var currentPrinterIndex = 1;
+
 (function () {
 
-    // store a reference to the application object that will be created
-    // later on so that we can use it if need be
-    var app;
+    var printers = [], i;
+    for (i = 0; i < 10; i++) {
+        printers.push(createPrinter());
+    }
 
     // create an object to store the models for each view
     window.APP = {
@@ -17,7 +24,7 @@
         contacts: {
           title: 'Contacts',
           ds: new kendo.data.DataSource({
-            data: [{ id: 1, name: 'Bob' }, { id: 2, name: 'Mary' }, { id: 3, name: 'John' }]
+            data: printers
           }),
           alert: function(e) {
             alert(e.data.name);
@@ -25,6 +32,8 @@
         }
       }
     };
+    
+    listviewDatasource = window.APP.models.contacts.ds;
 
     // this function is called by Cordova when the application is loaded by the device
     document.addEventListener('deviceready', function () {  
@@ -46,7 +55,33 @@
         initial: 'views/contacts.html'
       });
 
+
     }, false);
+    
 
 
 }());
+
+function createPrinter() {
+    var newPrinter = { id: currentPrinterIndex, name: ('printer' + currentPrinterIndex), serial: (345678 - currentPrinterIndex) };
+    currentPrinterIndex++;
+    return newPrinter;
+}
+
+function onSelect(e) {
+    var index = this.current().index();
+    if (index === 0) {
+        app.navigate("views/home.html");        
+    }
+    else {
+        app.navigate("views/contacts.html");        
+    }
+}
+
+// jorges comment
+function addPrinter(e) {
+    var newPrinter = createPrinter();
+    listviewDatasource.add(newPrinter);
+}
+
+

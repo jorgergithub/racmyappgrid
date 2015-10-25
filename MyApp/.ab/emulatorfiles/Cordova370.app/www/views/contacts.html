@@ -1,43 +1,44 @@
 <div data-role="view" data-title="Contacts" data-layout="main" data-model="APP.models.contacts">
     <div data-role="header">
-        <div style="margin: 20px; border-bottom: 5px solid #b0d255; height: 75px">
-            <div style="float: left;">
+        <div class="headerDiv" style="border-bottom: 5px solid #b0d255;">
+            <div style="float: left;" class="headerIcon" >
                 <img src="styles/images/green_bubble.png" height="50" alt=""/>
             </div>
-            <div style="padding-left: 10px; float:left; font-size: 40px; font-weight: bolder;">
+            <div class="headerLabel" style="padding-left: 10px; float:left; ">
                  My Printers
             </div>
             <div style="float:right; height: 100%">
                 <div style="display: inline-block; height: 100%; vertical-align: bottom;"></div>
-                <button type="button" style="border: none; padding: 0; background: none; display: inline-block">
-                    <img src="styles/images/31-circle-plus-green.png" height="32" alt=""/>
+                <a data-role="button" style="border: none; padding: 0; background: none; display: inline-block" data-click="addPrinter">
+                    <img src="styles/images/31-circle-plus-green.png" class="addPrinterButton" alt=""/>
 
-                    <div style="float:right; padding-left: 3px; color: #b0d255; font-size: 20px; padding-top: 6px">
+                    <div class="headerAddPrinter" style="float:right; padding-left: 3px; color: #b0d255; padding-top: 6px">
                         ADD PRINTER
                     </div>
-                </button>
+                </a>
             </div>
         </div>
     </div>
 
-    <ul data-role="listview" data-style="inset" data-template="contactsTemplate" data-bind="source: ds" style="border:none"></ul>
+    <ul data-role="listview" id="printerrow" data-style="inset"
+        data-template="contactsTemplate" data-bind="source: ds"></ul>
 
     <!-- this is the template used by the listview. template items are automatically
          wrapped in an <li> by Kendo UI Mobile -->
     <script type="text/x-kendo-template" id="contactsTemplate">
-        <div>
-            <button type="button" style="width:48%;">
-                <div style="width:48%; display: flex; justify-content: center; align-items: center">
-                    <img src='styles/images/thumb_c1357.png' style="margin-right: 60px">
-                    <div style="float: right; font-size: 14px; font-weight: bold">#: data.name #<br>#: data.id #</div>
+        <span style="width: 95%">
+            <a data-role="button" data-icon="details" class="printerRowWidth" style="min-width:250px; background-image: url('styles/images/link_bkg.png'); background-size: 100% 100%">
+            	<div style="display: flex; justify-content: left; align-items: center;">
+                    <img src='styles/images/thumb_c1357.png' style="margin-right: 30px">
+                    <div style="float: right; font-size: 14px; font-weight: bold">#: data.name #<br>#: data.id #<br>#: data.serial #</div>
                 </div>
-            </button>
-            <button type="button" style="width:48%;">
-                <div style="width:48%; display: flex; justify-content: center; align-items: center">
-                    <img src='styles/images/thumb_c1357.png' style="margin-right: 60px">
-                    <div style="float: right; font-size: 14px; font-weight: bold">#: data.name #<br>#: data.id #</div>
+            </a>
+            <a data-role="button" data-icon="details" class="printerRowWidth" style="min-width:250px; background-image: url('styles/images/link_bkg.png'); background-size: 100% 100%">
+            	<div style="display: flex; justify-content: left; align-items: center; ">
+                    <img src='styles/images/thumb_c1357.png' style="margin-right: 30px">
+                    <div style="float: right; font-size: 14px; font-weight: bold">#: data.name #<br>#: data.id #<br>#: data.serial #</div>
                 </div>
-            </button>
-        </div>
+            </a>
+        </span>
     </script>
 </div>

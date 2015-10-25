@@ -356,3 +356,110 @@ body, html {
         background-size: 100%;
     }
 }
+
+#racbuttonstrip .km-state-active {
+    background-color: white;     
+    color: black;
+}
+
+#racbuttonstrip {
+    background-color: black;     
+    color: white;
+}
+
+
+#racbuttonstrip li {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white; 
+}
+
+#printerrow li {
+    border: none;
+    padding: 0;
+}
+
+#homepage .km-content {
+    background-image: url(../styles/images/business_bkg.png);
+    background-size: 100% 100%;
+}
+
+.printerRowWidth {
+    width: 49%; 
+}
+
+.headerLabel {
+    font-size: 40px; font-weight: bolder;
+}
+
+.headerAddPrinter {
+    font-size: 20px; 
+}
+
+.headerDiv {
+    height: 75px;
+    margin: 20px 5px 20px 20px; 
+}
+
+.addPrinterButton {
+    height: 32px;
+}
+
+#buttonStripDiv {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    padding-top: 5px;
+
+}
+
+.footerDiv {
+    height: 80px; 
+}
+
+.navButton {
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 480px) {
+    .printerRowWidth {
+        width: 98%; 
+    }
+
+    .footerIcon {
+        display: none; 
+    }
+    
+    .headerLabel {
+        font-size: 20px; 
+    }
+    
+    .headerIcon {
+        display: none; 
+    }
+    
+    .headerAddPrinter {
+        font-size: 12px; 
+    }
+    
+    .headerDiv {
+        height: 40px;
+        margin: 10px 3px 10px 10px; 
+    }
+
+    .addPrinterButton {
+        height: 22px;
+    }
+    .footerDiv {
+        height: 60px; 
+    }
+    .navButton {
+        font-size: 14px;
+    }
+}
+
+
+
+
