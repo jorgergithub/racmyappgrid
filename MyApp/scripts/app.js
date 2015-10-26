@@ -8,7 +8,7 @@ var currentPrinterIndex = 1;
 (function () {
 
     var printers = [], i;
-    for (i = 0; i < 10; i++) {
+    for (i = 0; i < 10000; i++) {
         printers.push(createPrinter());
     }
 
@@ -56,7 +56,7 @@ var currentPrinterIndex = 1;
       });
 
     }, false);
-    
+
 
 
 }());

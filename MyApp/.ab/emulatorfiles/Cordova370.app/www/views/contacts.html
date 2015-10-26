@@ -1,4 +1,4 @@
-<div data-role="view" data-title="Contacts" data-layout="main" data-model="APP.models.contacts">
+<div data-role="view" data-title="Contacts" data-layout="main" data-model="APP.models.contacts" data-init="listViewInit">
     <div data-role="header">
         <div class="headerDiv" style="border-bottom: 5px solid #b0d255;">
             <div style="float: left;" class="headerIcon" >
@@ -20,8 +20,12 @@
         </div>
     </div>
 
+    <!--
     <ul data-role="listview" id="printerrow" data-style="inset"
         data-template="contactsTemplate" data-bind="source: ds"></ul>
+    -->
+
+    <ul id="printerrow"></ul>
 
     <!-- this is the template used by the listview. template items are automatically
          wrapped in an <li> by Kendo UI Mobile -->
@@ -40,5 +44,16 @@
                 </div>
             </a>
         </span>
+    </script>
+
+    <script>
+        function listViewInit() {
+            $("#printerrow").kendoMobileListView({
+                dataSource: listviewDatasource,
+                template: $("#contactsTemplate").text(),
+                virtualViewSize: 50,
+                endlessScroll: true
+            });
+        }
     </script>
 </div>
